@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My First Website - Aaron's Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="mystyles.css">
+	<script src="SpryAssets/SpryData.js"  type="text/javascript"></script>
+	<script src="SpryAssets/xpath.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var webPages = new Spry.Data.XMLDataSet("firstwebsiteData", "pages/page"); //Retrieves the XML data file.
+	</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
+       <a class="navbar-brand" href="#" id="top">Navigation</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/firstwebsite.html">My First Website<span class="sr-only">(current)</span></a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mobiledev.html">Mobile Development</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/phptoknowledge.html">PHP Examples</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/javascripting.html">JavaScript</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/domedits.html">DOM</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/references.html">References</a>
+            </li>
+          </ul>
+       </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center myjumbo">
+       <h1 class="display-4">My First Website</h1>
+    </div>
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">About the Website</h5>
+                   <p class="card-text">
+		               <div class="cssLink">For IT 213, Introduction to Web Development, we had to create our own
+					   websites from scratch about a topic of our choosing. I decided to create
+					   a site for the fictitious "Kid Tech," a computer accessory and repair 
+					   online market. The entire site was constructed with HTML and used an
+					   external CSS style sheet. You can view that style sheet <a href="http://mason.gmu.edu/~alugo2/IT213/Project5/mystyles.css">here.</a> If
+					   you would like to go to the website directly, click the button below: <br><br>
+					 <!--This button has the JavaScript method window.open() activate when clicked. --> 
+					 <button onclick="window.open('http://mason.gmu.edu/~alugo2/IT213/Project5/index.html', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');">Open Window</button> 
+					 <br>
+					</div>
+                </div>
+             </div>
+             <br>
+			 <hr>
+             <br/>
+          </div>
+		  </div>
+		  <div class="row">
+          <div class="col-md-12">
+			<div spry:region="webPages">
+					<table>
+						<thead>
+							<tr>
+								<th>Preview</th>
+								<th>Description</th>
+								<th>Link</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr spry:repeat="webPages" spry:setrow="webPages">
+								<td><img src="{siteimage}" alt="Preview of the webpage."></td>
+								<td>{desc}</td>
+								<td><div class="cssLink"><a href="{url}">{pagelink}</a></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+             </div>
+             <br>
+             <br/>
+          </div>
+       
+       <br>
+       <hr>
+	   <br>
+	   
+       <div class="row">
+           <div class="text-center col-md-12">
+		  <div class="card">
+		   <div class="card-body">
+             <h4>Disclaimer</h4>
+             <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and 
+			 have been prepared according to the multimedia fair use guidelines and are restricted from 
+			 further use.<br> <div class="cssLink"><a href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mystyles.css" >My CSS File</a></div>
+			 <br><div class="cssLink"><a href="#top" >Back to Top</a></div><br>
+			 <script type="text/javascript">
+				document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.
+			 </script>
+          </div>
+		  </div>
+		  </div>
+       </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

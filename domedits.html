@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DOM - Aaron's Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="mystyles.css">
+		<script type="text/javascript">	
+		
+		//This function includes all the listener events to start specific DOM features.
+		
+			function start(){
+				document.getElementById("btnHighlight").addEventListener("click", highlight, false);
+				document.getElementById("insert").addEventListener("click", newComment, false);
+				document.addEventListener("mouseover", mOver, false);
+				document.addEventListener("mouseout", mOut, false);
+				document.getElementById("expand").addEventListener("click", function() {expand("coolgoatSmall.jpg");}, false);
+			}
+			
+		/**This function activates when the "Highlight Key Terms" button is clicked.
+		It gathers all the words surrounded by the "span" tag into, an element collection,
+		then highlights them*/
+		
+			function highlight(){
+				var keyWords = document.getElementsByTagName("span");
+				for (var i = 0; i < keyWords.length; ++i){
+					keyWords[i].setAttribute("class", "yellow");
+				}
+			}
+			
+		/**This function activates when the "Insert New Node" button is clicked.
+		It creates a new "p" element and fills it with text, then inserts it before
+		a blank span tag with the id "insrtBefore" to keep the button on top of the comments
+		for easy access.*/
+		
+			function newComment(){
+				var newComment=document.createElement("p");
+				var currentNode=document.getElementById("insrtBefore");
+				var newText=document.createTextNode("This is a new node, wow!"); 
+				newComment.appendChild(newText);
+				currentNode.parentNode.insertBefore(newComment, currentNode);
+			}
+			
+		/**This function activates when the user hovers their mouse on the image
+		located under "Example: Mousever/Mouseout" card. When the user does so, the image
+		changes into a different image of a goat. It identifies these images by
+		searching for the attribute "usemap," which is intentionally left blank
+		since it was used only for retrieval purposes.*/
+		
+			function mOver(e){
+				if (e.target.getAttribute("usemap")) 
+				{
+					e.target.setAttribute("src", "mailgoat.jpg");
+				}
+			}
+			
+		/**This functions activates when the user's mouse leaves the image space. It
+		functions the exact same way as mOver, except it switches the image back into
+		the original image.*/
+		
+			function mOut(e){
+				if (e.target.getAttribute("usemap")) 
+				{
+					e.target.setAttribute("src", "bucket.png");
+				}
+			}
+			
+			//These variables are set to be used for the functions following them.
+			
+			var interval = null;
+			var speed = 6;
+			var count = 0;
+			
+			/**This function activiates when the user clicks the expand button.
+			It makes the image grow by until the count reaches a certain number.
+			At that point, it terminates the growing interval and the attributes for the
+			grown image are set.*/
+			
+			function run(){
+			
+			count += speed;
+			
+			if (count >= 375)
+			{
+				window.clearInterval(interval);
+				interval = null;
+			}
+			
+			var bigImage = document.getElementById("coolgoat");
+			bigImage.setAttribute("style", "width: " + (0.7656 * count + "px;") +
+				"height: " + (count + "px;"));
+			
+			}
+			
+			/**This function gathers the original image file and sets it to
+			the smallest width and height. This gives it the impression of an animation
+			as it starts the "run" function.*/
+			
+			function expand(imgFile){
+				if (interval)
+					return;
+					
+				var bigImage = document.getElementById("coolgoat");
+				bigImage.setAttribute("style", "width: 0px; height: 0px;");
+				bigImage.setAttribute("src", "coolgoatOriginal.jpg");
+				count = 0;
+				interval = window.setInterval("run()", 10);
+			}
+			
+			//Activates the start function whenever the page is loaded.
+			
+			window.addEventListener("load", start, false);
+		</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
+       <a class="navbar-brand" href="#" id="top">Navigation</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/firstwebsite.html">My First Website</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mobiledev.html">Mobile Development</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/phptoknowledge.html">PHP Examples</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/javascripting.html">JavaScript</a>
+            </li>
+			<li class="nav-item active">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/domedits.html">DOM</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/references.html">References</a>
+            </li>
+          </ul>
+       </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center myjumbo">
+       <h1 class="display-4">DOM</h1>
+    </div>
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">What is DOM?</h5>
+                   <p class="card-text">
+						The <span>Document Object Model</span>, or <span>DOM</span>, gives 
+						access to all elements on a webpage. It treats <span>HTML elements</span>
+						as <span>objects</span>, and the <span>attributes</span> are 
+						<span>properties</span> of the objects. Every element
+						is modeled by a <span>DOM node</span>, and all the nodes make up the page's
+						<span>DOM tree</span>.
+						<br>
+						<br>
+					<button id="btnHighlight">Highlight Key Terms</button>
+                </div>
+             </div>
+          </div>
+       </div>
+       <br>
+	   <hr>
+       <br>
+       <div class="row">
+          <div class=" col-md-6">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Example: Adding New Nodes</h5>
+				<br>
+				<form>
+					<input type="button" id="insert" value="Insert New Node">
+				</form>
+				<br>
+				<span id="insrtBefore"></span>
+			</div>
+			</div>
+		  </div>
+		  <div class=" col-md-6">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Example: Mouseover/Mouseout</h5>
+				<img id="goat" class="card-img-top" src="bucket.png" usemap="#" alt="Images of goats that change when you move your mouse over and out of it.">
+			</div>
+			</div>
+		  </div>
+       </div>
+       
+       <br>
+       <hr>
+	   <br>
+	   
+	   <div class="row">
+          <div class="text-center col-md-12">
+		  <div class="card">
+		   <div class="card-body">
+             <h5 class="card-title">Example: Scripted Animations</h5>
+				<form>
+					<input type="button" id="expand" value="Expand Image">
+				</form>
+				<br>
+				<img src = "coolgoatSmall.jpg" id="coolgoat" alt="A very cool goat.">
+          </div>
+		  </div>
+		  </div>
+       </div>
+	   
+	   <br>
+       <hr>
+	   <br>
+	   
+	   
+       <div class="row">
+          <div class="text-center col-md-12">
+		  <div class="card">
+		   <div class="card-body">
+             <h4>Disclaimer</h4>
+             <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and 
+			 have been prepared according to the multimedia fair use guidelines and are restricted from 
+			 further use.<br> <div class="cssLink"><a href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mystyles.css" >My CSS File</a></div>
+			 <br><div class="cssLink"><a href="#top" >Back to Top</a></div><br>
+			 <script type="text/javascript">
+				document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.
+			 </script>
+          </div>
+		  </div>
+		  </div>
+       </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

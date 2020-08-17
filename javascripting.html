@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript - Aaron's Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="mystyles.css">
+	<script type="text/javascript"></script>
+	<script>	
+		
+		//This variable stores the user's inputted name, then it is passed into localStorage for later use.
+		
+		const initialName = document.getElementById("name");
+		localStorage.setItem("name", initialName);
+		
+		//This function retrieves the name that was inputted and displays it with a personalized greeting.
+		
+		function printName(){
+		const storedName = localStorage.getItem("name");
+		document.getElementById("greeting").innerHTML="Hello there, " + storedName + "!";
+		goatFacts(); //Since printName is executed when the page loads, a call to the goatFacts function is included so it also executes.
+		}
+		
+		//This function creates an array of goat facts, then sends the array through a for loop to format and print the data onto the page.
+		
+		function goatFacts(){
+			var goatFacts = new Array(3);
+				goatFacts[0] = "Baby goats, also known as kids, are standing and walking within a minute of being born.";
+				goatFacts[1] = "Goats are herd animals, so they will become depressed if they don't have a friend. It's good to own multiple at a time.";
+				goatFacts[2] = "Contrary to popular belief, goats are actually very picky eaters. They use their mouths to feel food before consuming it to make sure it's clean. They won't eat loose hay at all.";
+				goatFacts[3] = "Some owners put pool noodles on their goats to prevent them from damaging things they decide to ram into."
+			var results = document.getElementById("facts"); //Retrieves the text area for the data and stores it in a variable for easier editing within the for loop.
+			for (i=0; i<goatFacts.length; ++i){
+				results.innerHTML += "<li>" + goatFacts[i] + "</li>";
+			}
+		}
+		
+		
+		window.addEventListener("load", printName, false);  //Executes the printName function when the page is loaded.
+		
+	</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
+       <a class="navbar-brand" href="#" id="top">Navigation</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/firstwebsite.html">My First Website<span class="sr-only">(current)</span></a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mobiledev.html">Mobile Development</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/phptoknowledge.html">PHP Examples</a>
+            </li>
+			<li class="nav-item active">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/javascripting.html">JavaScript</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/domedits.html">DOM</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/references.html">References</a>
+            </li>
+          </ul>
+       </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center myjumbo">
+       <h1 class="display-4">JavaScript</h1>
+    </div>
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title" id="greeting"></h5>
+                   <p class="card-text">
+		               This page executes some simple JavaScript functions. Enter your name below: <br>
+					   <fieldset>
+					   <!--This form allows the user to enter their name and submit it, which activates the JavaScript functions necessary for storing the name.-->
+					   <form>
+							<input type="text" id="name">
+							<button onclick="setName()">Submit</button> 
+					   </form>
+					   </fieldset>
+                </div>
+             </div>
+             <br>
+			 <hr>
+             <br/>
+			 <div class="row">
+			  <div class="col-md-4">
+             <div class="card">
+				<img id="goat" class="card-img-top" src="badgoat.jpg" alt="Bad goat.">
+             </div>
+          </div>
+		  <div class="col-md-8">
+			 <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">Did you know?</h5>
+                   <p class="card-text" >
+						<ul id="facts"></ul> <!--A blank unordered list is created for the data that is formatted in the goatFacts() function.-->
+                </div>
+             </div>
+			</div>
+          </div>
+		  </div>
+		  </div>
+          <br>
+		  <hr>
+          <br/>
+       <div class="row">
+           <div class="text-center col-md-12">
+		  <div class="card">
+		   <div class="card-body">
+             <h4>Disclaimer</h4>
+             <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and 
+			 have been prepared according to the multimedia fair use guidelines and are restricted from 
+			 further use.<br> <div class="cssLink"><a href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mystyles.css" >My CSS File</a></div>
+			 <br><div class="cssLink"><a href="#top" >Back to Top</a></div><br>
+			 <script type="text/javascript">
+				document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.
+			 </script>
+
+          </div>
+		  </div>
+		  </div>
+       </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

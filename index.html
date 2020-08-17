@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Aaron's Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="mystyles.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+		<script>	
+			
+			/**This function retrieves text data through an XMLHttpRequest object, 
+			then prints it when a button is clicked. Another button is also created,
+			with the intent to do nothing. :)
+			*/
+			
+			function xmlRequest(){
+			
+			const xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if (xhr.readyState == 4 && xhr.status == 200){
+						var secretText = document.getElementById("secret");
+						secretText.textContent=xhr.responseText;
+						var button = document.createElement("input"); //Button that does nothing.
+						button.setAttribute("type", "button");
+						button.setAttribute("value", "Okay, I'll tell you something.");
+						secretText.appendChild(button); //Adds the button that does nothing.
+				}
+			};
+			
+			xhr.open("get", "secret.txt", true);
+			xhr.send();
+			
+			}
+			
+			//This function creates a new array that stores the numbers 1 through 3, then sends it to another function.
+			
+			function startGoat(){
+				
+				var goatCount = new Array(3);
+				goatCount[0] = 1;
+				goatCount[1] = 2;
+				goatCount[2] = 3;
+				selectGoat(goatCount);
+				
+			}
+			
+			//This function calculates a random number and uses it to display 1 of 3 goat images.
+			
+			function selectGoat(goatCount){
+				
+				//Calculates a random value between 1 and 2.
+				var gImgValue = Math.floor(Math.random() * 3);
+				
+				//The number calculated from before, gImgValue, is inserted into the array to retrieve the number stored to the respective index.
+				var selectedGoat = goatCount[gImgValue];
+				
+				//Sets the image gathered by selectedGoat and displays it.
+				document.getElementById("goat").src = "goat" + selectedGoat + ".jpg";
+
+			}
+					
+				//Automatically executes the function on page startup.
+				window.addEventListener("load", startGoat, false);
+			
+		</script>
+  </head>
+  <body onload="startGoat">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
+       <a class="navbar-brand" href="#" id="top">Navigation</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/firstwebsite.html">My First Website</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mobiledev.html">Mobile Development</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/phptoknowledge.html">PHP Examples</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/javascripting.html">JavaScript</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/domedits.html">DOM</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/references.html">References</a>
+            </li>
+          </ul>
+       </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center myjumbo">
+       <h1 class="display-4">Aaron's Portfolio</h1>
+    </div>
+    <div class="container">
+       <div class="row">
+          <div class="col-md-4">
+             <div class="card">
+				<img id="goat" class="card-img-top" src="blank.jpg" alt="A random photo of me.">
+             </div>
+          </div>
+          <div class="col-md-8">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">About me</h5>
+                   <h6 class="card-subtitle mb-2 text-muted">I am a very interesting dude.</h6>
+                   <p class="card-text">
+						<ul>
+							<li>I am 22 years old, born on the rainy Tuesday of November 11th, 1997.</li>
+							<li>Graduated from Osbourn Park High School in 2016</li>
+							<li>I am passionate about video games. Some of my favorites are Pokemon, Skyrim, Fate/Grand Order, and Corpse Party.</li>
+							<li>I really like goats.</li>
+							<li>I watch anime on my free time, too. A few of my favorites are From the New World and Demon Slayer.</li>
+							<li>I am an avid collector of Nintendo's amiibo figures. I have over 100.</li>
+							<li>Did I mention I like goats?</li>
+						</ul>
+						<div>
+							<button type="button" onclick="xmlRequest()">A secret about me!</button><br><br>
+							<p id="secret"></p>
+							
+						</div>
+                </div>
+             </div>
+             <br>
+             <br/>
+          </div>
+       </div>
+       <br/>
+	   <hr>
+       <br/>
+       <div class="row">
+          <div class=" col-md-12">
+			<div class="card">
+			<div class="card-body">
+			<form id="rating" action="thankyou.html">	
+				<fieldset>
+					<legend>Take a moment to rate my site, if you'd like.</legend><br>
+						<div>
+							<label for="firstName">First Name: </label>
+							<input type="text" id="firstName" required>
+						</div><br>
+						<div>
+							<label for="lastName">Last Name: </label> 
+							<input type="text" id="lastName" required>
+						</div><br>
+						<div>
+							<label for="datepicker">Date of Birth: </label>
+							<input type="text" id="datepicker" /><br>
+						</div><br>
+						<div>
+							<label for="email">E-mail: </label>
+							<input type="email" id="email" required>
+						</div><br>
+						<div>
+							Are you a GMU student?<br><br>
+							<input type="radio" name="ans"> Yes <br>
+							<input type="radio" name="ans"> No <br><br>
+							If you said yes to the question above, what is your class ranking? 
+							<select>
+								<option>Select one</option>
+								<option>Freshman</option>
+								<option>Sophomore</option>
+								<option>Junior</option>
+								<option>Senior</option>
+								<option>Graduate</option>
+								<option>Don't know</option>
+								<option>Not Applicable</option>
+							</select>
+						</div><br>
+						<div>
+							Comments: <br><br>
+							<textarea rows="4" cols="50" required></textarea>
+						</div><br>
+						<div>
+							Rate my site: <br>
+							<input type="range" min="1" max="10">
+						</div><br>
+						<div>
+							<input type="submit" value="Submit"> <input type="reset" value="Clear">
+						</div>
+				</fieldset>
+			</form>
+			<script>
+			
+			//Initializes the jQuery code for validation and the date picker.
+			
+				$(document).ready(function(){
+					$("#rating").validate();
+					$("#goat").fadeIn(300);
+				});
+				
+				$('#datepicker').datepicker({});
+				
+			</script>
+			</div>
+			</div>
+		  </div>
+       </div>
+       
+       <br>
+       <hr>
+	   <br>
+	   
+       <div class="row">
+          <div class="text-center col-md-12">
+		  <div class="card">
+		   <div class="card-body">
+             <h4>Disclaimer</h4>
+             <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and 
+			 have been prepared according to the multimedia fair use guidelines and are restricted from 
+			 further use.<br> <div class="cssLink"><a href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mystyles.css" >My CSS File</a></div>
+			 <br><div class="cssLink"><a href="#top" >Back to Top</a></div><br>
+			 <script type="text/javascript">
+				document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.
+			 </script>
+          </div>
+		  </div>
+		  </div>
+       </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
