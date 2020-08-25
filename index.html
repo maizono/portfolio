@@ -11,31 +11,7 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-		<script>	
-			
-			/**This function retrieves text data through an XMLHttpRequest object, 
-			then prints it when a button is clicked. Another button is also created,
-			with the intent to do nothing. :)
-			*/
-			
-			function xmlRequest(){
-			
-			const xhr = new XMLHttpRequest();
-			xhr.onreadystatechange = function(){
-				if (xhr.readyState == 4 && xhr.status == 200){
-						var secretText = document.getElementById("secret");
-						secretText.textContent=xhr.responseText;
-						var button = document.createElement("input"); //Button that does nothing.
-						button.setAttribute("type", "button");
-						button.setAttribute("value", "Okay, I'll tell you something.");
-						secretText.appendChild(button); //Adds the button that does nothing.
-				}
-			};
-			
-			xhr.open("get", "secret.txt", true);
-			xhr.send();
-			
-			}
+		<script>
 			
 			//This function creates a new array that stores the numbers 1 through 3, then sends it to another function.
 			
@@ -151,7 +127,7 @@
 						</div><br>
 						<div>
 							<label for="datepicker">Date of Birth: </label>
-							<input type="text" id="datepicker" /><br>
+							<input type="date" id="datepicker" /><br>
 						</div><br>
 						<div>
 							<label for="email">E-mail: </label>
@@ -188,24 +164,20 @@
 			</form>
 			<script>
 			
-			//Initializes the jQuery code for validation and the date picker.
+			//Initializes the jQuery code for validation.
 			
 				$(document).ready(function(){
 					$("#rating").validate();
-					$("#goat").fadeIn(300);
-				});
-				
-				$('#datepicker').datepicker({});
-				
+				});	
 			</script>
 			</div>
 			</div>
 		  </div>
        </div>
-       
-       <br>
-       <hr>
-	   <br>
+	    
+        <br>
+	<hr>
+	<br>
 	   
        <div class="row">
           <div class="text-center col-md-12">
