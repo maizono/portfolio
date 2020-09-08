@@ -6,22 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JavaScript - Aaron's Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="mystyles.css">
+	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
 	<script type="text/javascript"></script>
 	<script>	
-		
-		//This variable stores the user's inputted name, then it is passed into localStorage for later use.
-		
-		const initialName = document.getElementById("name");
-		localStorage.setItem("name", initialName);
-		
-		//This function retrieves the name that was inputted and displays it with a personalized greeting.
-		
-		function printName(){
-		const storedName = localStorage.getItem("name");
-		document.getElementById("greeting").innerHTML="Hello there, " + storedName + "!";
-		goatFacts(); //Since printName is executed when the page loads, a call to the goatFacts function is included so it also executes.
-		}
 		
 		//This function creates an array of goat facts, then sends the array through a for loop to format and print the data onto the page.
 		
@@ -51,25 +38,25 @@
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/">Home</a>
+                <a class="nav-link" href="https://maizono.github.io/portfolio/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/firstwebsite.html">My First Website<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="https://maizono.github.io/portfolio/firstwebsite.html">My First Website</a>
             </li>
 			<li class="nav-item">
-                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mobiledev.html">Mobile Development</a>
+                <a class="nav-link" href="https://maizono.github.io/portfolio/mobiledev.html">Mobile Development</a>
             </li>
 			<li class="nav-item">
-                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/phptoknowledge.html">PHP Examples</a>
+                <a class="nav-link" href="https://maizono.github.io/portfolio/phptoknowledge.html">PHP Examples</a>
             </li>
 			<li class="nav-item active">
-                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/javascripting.html">JavaScript</a>
+                <a class="nav-link" href="https://maizono.github.io/portfolio/javascripting.html">JavaScript</a>
             </li>
 			<li class="nav-item">
-                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/domedits.html">DOM</a>
+                <a class="nav-link" href="https://maizono.github.io/portfolio/domedits.html">DOM</a>
             </li>
 			<li class="nav-item">
-                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/references.html">References</a>
+                <a class="nav-link" href="https://maizono.github.io/portfolio/references.html">References</a>
             </li>
           </ul>
        </div>
@@ -79,29 +66,10 @@
        <h1 class="display-4">JavaScript</h1>
     </div>
     <div class="container">
-		<div class="row">
-			<div class="col-md-12">
-             <div class="card">
-                <div class="card-body">
-                   <h5 class="card-title" id="greeting"></h5>
-                   <p class="card-text">
-		               This page executes some simple JavaScript functions. Enter your name below: <br>
-					   <fieldset>
-					   <!--This form allows the user to enter their name and submit it, which activates the JavaScript functions necessary for storing the name.-->
-					   <form>
-							<input type="text" id="name">
-							<button onclick="setName()">Submit</button> 
-					   </form>
-					   </fieldset>
-                </div>
-             </div>
-             <br>
-			 <hr>
-             <br/>
 			 <div class="row">
 			  <div class="col-md-4">
              <div class="card">
-				<img id="goat" class="card-img-top" src="badgoat.jpg" alt="Bad goat.">
+				<img id="goat" class="card-img-top" src="images/badgoat.jpg" alt="Bad goat.">
              </div>
           </div>
 		  <div class="col-md-8">
@@ -126,7 +94,7 @@
              <h4>Disclaimer</h4>
              <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and 
 			 have been prepared according to the multimedia fair use guidelines and are restricted from 
-			 further use.<br> <div class="cssLink"><a href="http://mason.gmu.edu/~alugo2/IT331/PROJECT/mystyles.css" >My CSS File</a></div>
+			 further use.<br> <div class="cssLink"><a href="https://maizono.github.io/portfolio/css/mystyles.css" >My CSS File</a></div>
 			 <br><div class="cssLink"><a href="#top" >Back to Top</a></div><br>
 			 <script type="text/javascript">
 				document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.
