@@ -16,7 +16,7 @@
 				document.getElementById("insert").addEventListener("click", newComment, false);
 				document.addEventListener("mouseover", mOver, false);
 				document.addEventListener("mouseout", mOut, false);
-				document.getElementById("expand").addEventListener("click", function() {expand("coolgoatSmall.jpg");}, false);
+				document.getElementById("expand").addEventListener("click", function() {expand("/images/coolgoatSmall.jpg");}, false);
 			}
 			
 		/**This function activates when the "Highlight Key Terms" button is clicked.
@@ -52,7 +52,7 @@
 			function mOver(e){
 				if (e.target.getAttribute("usemap")) 
 				{
-					e.target.setAttribute("src", "mailgoat.jpg");
+					e.target.setAttribute("src", "images/mailgoat.jpg");
 				}
 			}
 			
@@ -63,7 +63,7 @@
 			function mOut(e){
 				if (e.target.getAttribute("usemap")) 
 				{
-					e.target.setAttribute("src", "bucket.png");
+					e.target.setAttribute("src", "images/bucket.png");
 				}
 			}
 			
@@ -104,7 +104,7 @@
 					
 				var bigImage = document.getElementById("coolgoat");
 				bigImage.setAttribute("style", "width: 0px; height: 0px;");
-				bigImage.setAttribute("src", "coolgoatOriginal.jpg");
+				bigImage.setAttribute("src", "images/coolgoatOriginal.jpg");
 				count = 0;
 				interval = window.setInterval("run()", 10);
 			}
@@ -191,7 +191,7 @@
 			<div class="card">
 			<div class="card-body">
 				<h5 class="card-title">Example: Mouseover/Mouseout</h5>
-				<img id="goat" class="card-img-top" src="bucket.png" usemap="#" alt="Images of goats that change when you move your mouse over and out of it.">
+				<img id="goat" class="card-img-top" src="images/bucket.png" usemap="#" alt="Images of goats that change when you move your mouse over and out of it.">
 			</div>
 			</div>
 		  </div>
@@ -210,7 +210,7 @@
 					<input type="button" id="expand" value="Expand Image">
 				</form>
 				<br>
-				<img src = "coolgoatSmall.jpg" id="coolgoat" alt="A very cool goat.">
+				<img src = "images/coolgoatSmall.jpg" id="coolgoat" alt="A very cool goat.">
           </div>
 		  </div>
 		  </div>
