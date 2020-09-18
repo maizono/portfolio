@@ -35,19 +35,19 @@ th {
 
 .mynav{
 	background-color: #333 !important;
-	font-family: sans-serif, tahoma !important;
+	font-family: Tahoma !important;
 	padding-bottom: 50px;
 }
 
 .myjumbo{
 	background-color: ##333 !important;
 	text-shadow: 2px 2px 4px #000 !important;
-	font-family: sans-serif, tahoma !important;
+	font-family: Tahoma !important;
 }
 
 body{
 	background-color: #333 !important;
-	font-family: sans-serif, tahoma !important;
+	font-family: Tahoma !important;
 	color: white;
 }
 
@@ -85,7 +85,7 @@ input[type=date] {
   left: 0;
   width: 100%;
   text-align: center;
-  font-family: sans-serif, tahoma;
+  font-family: Tahoma;
   font-size: 10px;
   color: #FFF;
 }
