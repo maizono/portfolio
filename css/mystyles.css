@@ -53,6 +53,7 @@ body{
 
 .row ul {
 	list-style-type: square !important;
+	font-family: Tahoma !important;
 }
 
 input[type=text] {
@@ -96,6 +97,10 @@ input[type=date] {
 
 .footer a:hover{
 	color: #FFF;
+}
+
+.footer a{
+	color: inherit;
 }
 
 .content-align {
