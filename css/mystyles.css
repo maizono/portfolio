@@ -14,7 +14,12 @@
 	padding: 5px;
 }
 
-
+table {
+	width: 100%;
+	border: 2px solid green;
+	background-color: #0F9;
+	overflow: auto;
+}
 
 td {
 	padding: 5px;
@@ -85,13 +90,6 @@ input[type=date] {
 	text-align: center;
 	font-family: Tahoma, sans-serif !important;
 	font-size: 10px;
-	color: #FFF;
-}
-
-.tablefoot {
-	text-align: center;
-	font-family: Tahoma, sans-serif !important;
-	font-size: 10px !important;
 	color: #FFF;
 }
 
