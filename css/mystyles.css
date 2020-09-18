@@ -19,6 +19,7 @@ table {
 	border: 2px solid green;
 	background-color: #0F9;
 	overflow: auto;
+	padding-bottom: 100px;
 }
 
 td {
