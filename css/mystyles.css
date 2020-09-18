@@ -1,5 +1,5 @@
 .ccsLink a:link{
-	color: #13643b;
+	color: green;
 }
 
 .cssLink a:visited{
@@ -65,7 +65,7 @@ body::-webkit-scrollbar{
 }
 
 .cardText a:link{
-	color: #13643b;
+	color: green;
 }
 
 .cardText a:visited{
