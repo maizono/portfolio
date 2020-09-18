@@ -35,15 +35,18 @@ th {
 
 .mynav{
 	background-color: #2c7873 !important;
+	font-family: sans-serif, verdana !important;
 }
 
 .myjumbo{
 	background-color: #52de97 !important;
 	text-shadow: 2px 2px 4px #000 !important;
+	font-family: sans-serif, verdana !important;
 }
 
 body{
 	background-color: #c0ffb3 !important;
+	font-family: sans-serif, verdana !important;
 }
 
 .row ul {
@@ -79,5 +82,7 @@ input[type=date] {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #2c7873;
+  text-align: center;
+  font-family: sans-serif, verdana;
 }
