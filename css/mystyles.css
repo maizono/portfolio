@@ -88,6 +88,13 @@ input[type=date] {
 	color: #FFF;
 }
 
+.tablefoot {
+	text-align: center;
+	font-family: Tahoma, sans-serif !important;
+	font-size: 10px !important;
+	color: #FFF;
+}
+
 .footer a:link{
 	color: #FFF;
 }
