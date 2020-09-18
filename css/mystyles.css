@@ -83,7 +83,6 @@ input[type=date] {
   left: 0;
   width: 100%;
   text-align: center;
-  color: black;
   font-family: sans-serif, verdana;
-  font-size: 6px;
+  font-size: 10px;
 }
