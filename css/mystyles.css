@@ -109,7 +109,12 @@ input[type=date] {
 
 .button {
 	background-color: #093;
+	text-align: center;
 	font-family: Tahoma, sans-serif !important;
 	border-radius: 16px;
 	color: #FFF;
+	padding: 10px;
+	border: none;
+	text-decoration: none;
+	display: inline-block;
 }
