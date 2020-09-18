@@ -15,7 +15,7 @@
 }
 
 table {
-	width: 100%;
+	width: 50%;
 	border: 2px solid green;
 	background-color: #0F9;
 	overflow: auto;
