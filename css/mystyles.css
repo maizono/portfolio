@@ -36,7 +36,6 @@ th {
 .mynav{
 	background-color: #333 !important;
 	font-family: Tahoma, sans-serif !important;
-	padding-bottom: 25px;
 }
 
 .myjumbo{
@@ -91,7 +90,7 @@ input[type=date] {
 	width: 100%;
 	text-align: center;
 	font-family: Tahoma, sans-serif !important;
-	-size: 10px;
+	font-size: 10px;
 	color: #FFF;
 }
 
@@ -106,4 +105,11 @@ input[type=date] {
 .footer a{
 	color: #FFF;
 	text-decoration: none;
+}
+
+.button {
+	background-color: #093;
+	font-family: Tahoma, sans-serif !important;
+	border-radius: 16px;
+	color: #FFF;
 }
