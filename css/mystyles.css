@@ -125,3 +125,7 @@ input[type=date] {
 	text-decoration: none;
 	display: inline-block;
 }
+
+.footerpad {
+	padding-bottom: 50px !important;
+}
