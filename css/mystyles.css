@@ -49,6 +49,7 @@ body{
 	font-family: Tahoma, sans-serif !important;
 	color: white;
 	overflow: hidden;
+	overflow-y: scroll;
 }
 
 .row ul {
