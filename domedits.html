@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 		<script type="text/javascript">	
 		
 		//This function includes all the listener events to start specific DOM features.
@@ -117,7 +120,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
-       <a class="navbar-brand" href="https://maizono.github.io/portfolio/" id="top"><span><img src="favicon.ico"></span></a>
+       <a class="navbar-brand" href="https://maizono.github.io/portfolio/" id="top"><img src="favicon.ico"></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
        </button>
@@ -160,17 +163,14 @@
           </ul>
        </div>
     </nav>
-
-    <div class="jumbotron jumbotron-fluid text-center myjumbo">
-       <h1 class="display-4">DOM</h1>
-    </div>
+	<br>
     <div class="container">
        <div class="row">
           <div class="col-md-12">
              <div class="card">
                 <div class="card-body">
-                   <h5 class="card-title">What is DOM?</h5>
-                   <p class="card-text">
+                   <h5 class="card-title cardText">What is DOM?</h5>
+                   <p class="card-text cardText">
 						The <span>Document Object Model</span>, or <span>DOM</span>, gives 
 						access to all elements on a webpage. It treats <span>HTML elements</span>
 						as <span>objects</span>, and the <span>attributes</span> are 
@@ -190,8 +190,8 @@
        <div class="row">
           <div class=" col-md-6">
 			<div class="card">
-			<div class="card-body">
-				<h5 class="card-title">Example: Adding New Nodes</h5>
+			<div class="card-body cardText">
+				<h5 class="card-title cardText">Example: Adding New Nodes</h5>
 				<br>
 				<form>
 					<input type="button" id="insert" value="Insert New Node">
@@ -203,8 +203,8 @@
 		  </div>
 		  <div class=" col-md-6">
 			<div class="card">
-			<div class="card-body">
-				<h5 class="card-title">Example: Mouseover/Mouseout</h5>
+			<div class="card-body cardText">
+				<h5 class="card-title cardText">Example: Mouseover/Mouseout</h5>
 				<img id="goat" class="card-img-top" src="images/bucket.png" usemap="#" alt="Images of goats that change when you move your mouse over and out of it.">
 			</div>
 			</div>
@@ -219,7 +219,7 @@
           <div class="text-center col-md-12">
 		  <div class="card">
 		   <div class="card-body">
-             <h5 class="card-title">Example: Scripted Animations</h5>
+             <h5 class="card-title cardText">Example: Scripted Animations</h5>
 				<form>
 					<input type="button" id="expand" value="Expand Image">
 				</form>
@@ -229,31 +229,15 @@
 		  </div>
 		  </div>
        </div>
-	   
-	   <br>
-       <hr>
-	   <br>
-	   
-	   
-       <div class="row">
-          <div class="text-center col-md-12">
-		  <div class="card">
-		   <div class="card-body">
-             <h4>Disclaimer</h4>
-             <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and 
-			 have been prepared according to the multimedia fair use guidelines and are restricted from 
-			 further use.<br> <div class="cssLink"><a href="https://maizono.github.io/portfolio/css/mystyles.css" >My CSS File</a></div>
-			 <br><div class="cssLink"><a href="#top" >Back to Top</a></div><br>
-			 <script type="text/javascript">
-				document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.
-			 </script>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="footerboot">
+					<p>© Aaron Lugo, <script type="text/javascript"> document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.</script></p>
+					<p><a href="#top" >Back to Top</a></p>
+				</div>
+            </div>
           </div>
-		  </div>
-		  </div>
-       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
