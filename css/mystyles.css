@@ -57,6 +57,10 @@ body::-webkit-scrollbar{
 	display: none;
 }
 
+.myrow{
+	padding: 50px !important;
+}
+
 .row ul {
 	list-style-type: square !important;
 	font-family: Tahoma, sans-serif !important;
