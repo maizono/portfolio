@@ -48,8 +48,13 @@ body{
 	background-color: #333 !important;
 	font-family: Tahoma, sans-serif !important;
 	color: white;
-	overflow: hidden;
 	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+	display: none;
 }
 
 .row ul {
