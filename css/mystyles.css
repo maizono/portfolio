@@ -36,7 +36,7 @@ th {
 .mynav{
 	background-color: #333 !important;
 	font-family: Tahoma, sans-serif !important;
-	padding-bottom: 50px;
+	padding-bottom: 25px;
 }
 
 .myjumbo{
@@ -85,14 +85,14 @@ input[type=date] {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
 	font-family: Tahoma, sans-serif !important;
-  font-size: 10px;
-  color: #FFF;
+	-size: 10px;
+	color: #FFF;
 }
 
 .footer a:link{
