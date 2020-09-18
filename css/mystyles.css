@@ -96,3 +96,8 @@ input[type=date] {
 .footer a:hover{
 	color: #000;
 }
+
+.content-align {
+	align-items: center !important;
+	justify-content: center !important;
+}
