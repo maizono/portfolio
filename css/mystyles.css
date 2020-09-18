@@ -64,6 +64,22 @@ body::-webkit-scrollbar{
 	font-family: Tahoma, sans-serif !important;
 }
 
+.cardText a:link{
+	color: #13643b;
+}
+
+.cardText a:visited{
+	color: #13643b;
+}
+
+.cardText a:hover{
+	color: #093;
+}
+
+.cardText a:active{
+	color: #6C3;
+}
+
 .row ul {
 	list-style-type: square !important;
 	font-family: Tahoma, sans-serif !important;
