@@ -1,9 +1,14 @@
+.ccsLink a:link{
+	color: #13643b;
+	transition: 0.3s;
+}
+
 .cssLink a:visited{
-	color: purple;
+	color: #13643b;
 }
 
 .cssLink a:hover{
-	color: green;
+	color: #093;
 }
 
 .appImage{
@@ -15,7 +20,7 @@
 }
 
 table {
-	width: 100%;
+	width: 75%;
 	border: 2px solid green;
 	background-color: #0F9;
 	overflow: auto;
@@ -35,12 +40,6 @@ th {
 
 .mynav{
 	background-color: #333 !important;
-	font-family: Tahoma, sans-serif !important;
-}
-
-.myjumbo{
-	background-color: ##333 !important;
-	text-shadow: 2px 2px 4px #000 !important;
 	font-family: Tahoma, sans-serif !important;
 }
 
@@ -97,6 +96,19 @@ input[type=date] {
 	color: #FFF;
 }
 
+.footerboot a:link{
+	color: #FFF;
+}
+
+.footerboot a:hover{
+	color: #FFF;
+}
+
+.footerboot a{
+	color: #FFF;
+	text-decoration: none;
+}
+
 .footer{
 	position: absolute;
 	bottom: 0;
@@ -135,5 +147,5 @@ input[type=date] {
 }
 
 .button:hover{
-	background-color: #093
+	background-color: #093;
 }
