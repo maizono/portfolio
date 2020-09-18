@@ -115,7 +115,7 @@ input[type=date] {
 }
 
 .button {
-	background-color: #093;
+	background-color: #13643b;
 	text-align: center;
 	font-family: Tahoma, sans-serif !important;
 	border-radius: 16px;
@@ -124,6 +124,11 @@ input[type=date] {
 	border: none;
 	text-decoration: none;
 	display: inline-block;
+	transition: 0.3s;
+}
+
+.button:hover{
+	background-color: #3c3
 }
 
 .footerpad {
