@@ -90,7 +90,18 @@ input[type=date] {
 	background-color: yellow;
 }
 
-.footer {
+.footerboot {
+	text-align: center;
+	font-family: Tahoma, sans-serif !important;
+	font-size: 10px;
+	color: #FFF;
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 	text-align: center;
 	font-family: Tahoma, sans-serif !important;
 	font-size: 10px;
