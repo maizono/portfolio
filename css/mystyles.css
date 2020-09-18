@@ -35,25 +35,29 @@ th {
 
 .mynav{
 	background-color: #333 !important;
-	font-family: Tahoma !important;
+	font-family: Tahoma, sans-serif !important;
 	padding-bottom: 50px;
 }
 
 .myjumbo{
 	background-color: ##333 !important;
 	text-shadow: 2px 2px 4px #000 !important;
-	font-family: Tahoma !important;
+	font-family: Tahoma, sans-serif !important;
 }
 
 body{
 	background-color: #333 !important;
-	font-family: Tahoma !important;
+	font-family: Tahoma, sans-serif !important;
 	color: white;
 }
 
 .row ul {
 	list-style-type: square !important;
-	font-family: Tahoma !important;
+	font-family: Tahoma, sans-serif !important;
+}
+
+.row li {
+	font-family: Tahoma, sans-serif !important;
 }
 
 input[type=text] {
@@ -86,7 +90,7 @@ input[type=date] {
   left: 0;
   width: 100%;
   text-align: center;
-  font-family: Tahoma;
+	font-family: Tahoma, sans-serif !important;
   font-size: 10px;
   color: #FFF;
 }
@@ -100,10 +104,6 @@ input[type=date] {
 }
 
 .footer a{
-	color: inherit;
-}
-
-.content-align {
-	align-items: center !important;
-	justify-content: center !important;
+	color: #FFF;
+	text-decoration: none;
 }
