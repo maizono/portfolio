@@ -6,6 +6,11 @@
 	padding: 5px;
 }
 
+.carousel-item img{
+ margin: auto; 
+ display: block;
+ }
+
 .aaronimg{
 	border-radius: 25px;
 	max-width: 100%;
