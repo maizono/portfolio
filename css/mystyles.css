@@ -34,6 +34,10 @@ body::-webkit-scrollbar {
 	outline: none;
 }
 
+.button:active {
+	outline: none;
+	border: none;
+}
 .button:hover {
 	background-color: #093;
 }
