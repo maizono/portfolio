@@ -17,6 +17,7 @@
 		
 			function start(){
 				document.getElementById("btnHighlight").addEventListener("click", highlight, false);
+				document.getElementById("btnRemovelight").addEventListener("click", removelight, false);
 				document.getElementById("insert").addEventListener("click", newComment, false);
 				document.addEventListener("mouseover", mOver, false);
 				document.addEventListener("mouseout", mOut, false);
@@ -31,6 +32,15 @@
 				var keyWords = document.getElementsByTagName("span");
 				for (var i = 0; i < keyWords.length; ++i){
 					keyWords[i].setAttribute("class", "yellow");
+				}
+			}
+			
+		//This button removes the highlighting.	
+			
+			function removelight(){
+				var keyWords = document.getElementsByTagName("span");
+				for (var i = 0; i < keyWords.length; ++i){
+					keyWords[i].setAttribute("class", "white");
 				}
 			}
 			
@@ -186,7 +196,7 @@
 						<span>DOM tree</span>.
 						<br>
 						<br>
-					<button class="button" id="btnHighlight">Highlight Key Terms</button>
+					<button class="button" id="btnHighlight">Highlight Key Terms</button> <button class="button" id="btnRemovelight">Clear</button>
                 </div>
              </div>
           </div>

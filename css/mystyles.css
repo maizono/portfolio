@@ -70,8 +70,8 @@ button:focus {
 }
 
 .carousel-item img {
- margin: auto; 
- display: block;
+	margin: auto; 
+	display: block;
  }
  
  .footerboot {
@@ -175,3 +175,6 @@ th {
 	background-color: yellow;
 }
 
+.white{
+	background-color: white;
+}
