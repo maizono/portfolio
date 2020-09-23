@@ -1,22 +1,140 @@
-.appImage{
-	border-radius: 25px;
-	border: 5px dotted green;
-	height: 601px;
-	width: 300px;
-	padding: 5px;
-}
-
-.carousel-item img{
- margin: auto; 
- display: block;
- }
-
-.aaronimg{
+.aaronimg {
 	border-radius: 25px;
 	max-width: 100%;
 	height: auto;
 	border: 1px solid #FFF;
 	display: inline;
+}
+
+body {
+	background-color: #333 !important;
+	font-family: Tahoma, sans-serif !important;
+	color: white;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+
+.button {
+	background-color: #13643b;
+	text-align: center;
+	font-family: Tahoma, sans-serif !important;
+	border-radius: 16px;
+	color: #FFF;
+	padding: 10px;
+	border: none;
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.3s;
+	outline: none;
+}
+
+.button:hover {
+	background-color: #093;
+}
+
+.cardText {
+	color: #333;
+	font-family: Tahoma, sans-serif !important;
+}
+
+.cardText a:link {
+	color: green;
+}
+
+.cardText a:visited {
+	color: #13643b;
+}
+
+.cardText a:hover {
+	color: #093;
+}
+
+.cardText a:active {
+	color: #6C3;
+}
+
+.carousel-item img {
+ margin: auto; 
+ display: block;
+ }
+ 
+ .footerboot {
+	text-align: center;
+	font-family: Tahoma, sans-serif !important;
+	font-size: 10px;
+	color: #FFF;
+}
+
+.footerboot a:link {
+	color: #FFF;
+}
+
+.footerboot a:hover {
+	color: #FFF;
+}
+
+.footerboot a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-family: Tahoma, sans-serif !important;
+	font-size: 10px;
+	color: #FFF;
+}
+
+.footer a:link {
+	color: #FFF;
+}
+
+.footer a:hover {
+	color: #FFF;
+}
+
+.footer a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+input[type=date] {
+	border: 2px solid green !important;
+	border-radius: 4px !important;
+}
+
+input[type=email] {
+	border: 2px solid green !important;
+	border-radius: 4px !important;
+}
+
+input[type=text] {
+	border: 2px solid green !important;
+	border-radius: 4px !important;
+}
+
+.mynav	{
+	background-color: #333 !important;
+	font-family: Tahoma, sans-serif !important;
+}
+
+.row ul {
+	list-style-type: square !important;
+	font-family: Tahoma, sans-serif !important;
+}
+
+.row li {
+	font-family: Tahoma, sans-serif !important;
 }
 
 table {
@@ -33,140 +151,17 @@ td {
 	background-color: #FFF;
 }
 
+textarea {
+	border: 2px solid green !important;
+	border-radius: 4px !important;
+}
+
 th {
 	padding: 5px;
 	border: 1px solid green;
 }
 
-.mynav{
-	background-color: #333 !important;
-	font-family: Tahoma, sans-serif !important;
-}
-
-body{
-	background-color: #333 !important;
-	font-family: Tahoma, sans-serif !important;
-	color: white;
-	overflow-y: scroll;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-
-body::-webkit-scrollbar{
-	display: none;
-}
-
-.cardText {
-	color: #333;
-	font-family: Tahoma, sans-serif !important;
-}
-
-.cardText a:link{
-	color: green;
-}
-
-.cardText a:visited{
-	color: #13643b;
-}
-
-.cardText a:hover{
-	color: #093;
-}
-
-.cardText a:active{
-	color: #6C3;
-}
-
-.row ul {
-	list-style-type: square !important;
-	font-family: Tahoma, sans-serif !important;
-}
-
-.row li {
-	font-family: Tahoma, sans-serif !important;
-}
-
-input[type=text] {
-	border: 2px solid green !important;
-	border-radius: 4px !important;
-}
-
-textarea{
-	border: 2px solid green !important;
-	border-radius: 4px !important;
-}
-
-input[type=email] {
-	border: 2px solid green !important;
-	border-radius: 4px !important;
-}
-
-input[type=date] {
-	border: 2px solid green !important;
-	border-radius: 4px !important;
-}
-
-.yellow{
+.yellow {
 	background-color: yellow;
 }
 
-.footerboot {
-	text-align: center;
-	font-family: Tahoma, sans-serif !important;
-	font-size: 10px;
-	color: #FFF;
-}
-
-.footerboot a:link{
-	color: #FFF;
-}
-
-.footerboot a:hover{
-	color: #FFF;
-}
-
-.footerboot a{
-	color: #FFF;
-	text-decoration: none;
-}
-
-.footer{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	font-family: Tahoma, sans-serif !important;
-	font-size: 10px;
-	color: #FFF;
-}
-
-.footer a:link{
-	color: #FFF;
-}
-
-.footer a:hover{
-	color: #FFF;
-}
-
-.footer a{
-	color: #FFF;
-	text-decoration: none;
-}
-
-.button {
-	background-color: #13643b;
-	text-align: center;
-	font-family: Tahoma, sans-serif !important;
-	border-radius: 16px;
-	color: #FFF;
-	padding: 10px;
-	border: none;
-	text-decoration: none;
-	display: inline-block;
-	transition: 0.3s;
-}
-
-.button:hover{
-	background-color: #093;
-}
