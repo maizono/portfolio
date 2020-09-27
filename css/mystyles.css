@@ -21,8 +21,9 @@ body::-webkit-scrollbar {
 }
 
 .build {
-	margin: 75px;
+	margin: 50px;
 	display: inline-block;
+	padding: 10px;
 }
 .button {
 	background-color: #13643b;
@@ -140,6 +141,10 @@ input[type=text] {
 .mynav	{
 	background-color: #333 !important;
 	font-family: Tahoma, sans-serif !important;
+}
+
+.mypad {
+	padding: 15px;
 }
 
 .row ul {
