@@ -15,6 +15,11 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();   
+		});
+	</script>
   </head>
   <body onload="startGoat">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
@@ -62,34 +67,60 @@
           </ul>
        </div>
     </nav>
-	<br>
-	<br> 
-	<div class="container">
+	<div class="container content-align">
+			<div class="row">
+			<h1>About this Website</h1>
+		</div>
 		<div class="row">
-			<div class="column-md-12">
-				<div class="card">
+		    <h4>I use this repository to showcase my skills directly to you!</h4>
+		</div>
+		<br>
+		<div class="row d-flex justify-content-center">
+			<h1>What's this site made of?</h1>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-12 d-flex justify-content-center">
+				<a href="#" data-toggle="tooltip" data-placement="top" title="HTML5"><img class="build" src="images/html.png" alt="HTML5 logo."></a>
+				<a href="#" data-toggle="tooltip" data-placement="top" title="CSS3"><img class="build" src="images/css.png" alt="CSS3 logo."></a>
+				<a href="#" data-toggle="tooltip" data-placement="top" title="JavaScript"><img class="build" src="images/javascript.png" alt="JavaScript logo."></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 d-flex justify-content-center">
+				<a href="#" data-toggle="tooltip" data-placement="top" title="XML"><img class="build" src="images/xml.png" alt="XML logo."></a>
+				<a href="#" data-toggle="tooltip" data-placement="top" title="AJAX"><img class="build" src="images/ajax.png" alt="AJAX logo."></a>
+				<a href="#" data-toggle="tooltip" data-placement="top" title="jQuery"><img class="build" src="images/jquery.png" alt="jQuery logo."></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 d-flex justify-content-center">
+				<a href="#" data-toggle="tooltip" data-placement="top" title="Bootstrap"><img class="build" src="images/bootstrap.png" alt="Bootstrap logo."></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card text-center">
 					<div class="card-body">
-					<h5 class="card-title cardText">About this website</h5>
+						<h4 class="card-title cardText">More Details</h4>
 						<p class="cardText">
-							This website was made to document and demonstrate my understanding of various web development skills.
-							Some parts of the website, such as forms, are purposely non-functioning to demonstrate design.
-							Function to these parts may or may not be added in the future. Some links may be broken as a consequence of
-							transferring these files from my university's cloud service to GitHub. They will be fixed as soon as possible.
-							Some images may also be broken as the files are being reorganized for better backend navigation. These will also
-							be fixed as soon as possible.
-							If any other issues are present other than the examples given above, please contact me at 
-							<a href="mailto:alugo2030@outlook.com">alugo2030@outlook.com</a> so I may mark it down for fixing.
-						</p>				
+							This website is being consistently updated as I learn more and continue to migrate from my university's cloud service.
+							Feel free to e-mail me at <a href="mailto:alugo2030@outlook.com">alugo2030@outlook.com</a> for feedback or questions.
+						</p>
 					</div>
-				</div>			
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="footerboot">
+					<p>© Aaron Lugo, <script type="text/javascript"> document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.</script></p>
+					<p><a href="#top" >Back to Top</a></p>
+				</div>
 			</div>
 		</div>
     </div>
-	<footer>
-			<div class="footer">
-				<p>© Aaron Lugo, <script> document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.</script></p>
-				<p><a href="#top" >Back to Top</a></p>
-			</div>
-	</footer>
   </body>
 </html>

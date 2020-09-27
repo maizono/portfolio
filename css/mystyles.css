@@ -19,7 +19,10 @@ body::-webkit-scrollbar {
 	display: none;
 }
 
-
+.build {
+	margin: 75px;
+	display: inline-block;
+}
 .button {
 	background-color: #13643b;
 	text-align: center;
