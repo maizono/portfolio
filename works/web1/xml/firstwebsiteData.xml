@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<pages>
+	<page>
+		<siteimage>images/home.png</siteimage>
+		<desc>The home page of my website. Contains a flash animation.</desc>
+		<pagelink>Home</pagelink>
+		<url>http://mason.gmu.edu/~alugo2/IT213/Project5/index.html</url>
+	</page>
+	
+	<page>
+		<siteimage>images/aboutus.png</siteimage>
+		<desc>An About page for the fictitious company.</desc>
+		<pagelink>About Us</pagelink>
+		<url>http://mason.gmu.edu/~alugo2/IT213/Project5/aboutus.html</url>
+	</page>
+
+	<page>
+		<siteimage>images/productlist.png</siteimage>
+		<desc>A list of products the company sold. Contains images of the products.</desc>
+		<pagelink>Product List</pagelink>
+		<url>http://mason.gmu.edu/~alugo2/IT213/Project5/productlist.html</url>
+	</page>
+
+	<page>
+		<siteimage>images/suppliers.png</siteimage>
+		<desc>A list of the company's suppliers. Included a logo for each supplier and links to their websites.</desc>
+		<pagelink>Suppliers</pagelink>
+		<url>http://mason.gmu.edu/~alugo2/IT213/Project5/suppliers.html</url>
+	</page>
+
+	<page>
+		<siteimage>images/deals.png</siteimage>
+		<desc>A page that offered discount codes to enter at checkout.</desc>
+		<pagelink>Deals</pagelink>
+		<url>http://mason.gmu.edu/~alugo2/IT213/Project5/deals.html</url>
+	</page>
+
+	<page>
+		<siteimage>images/repairs.png</siteimage>
+		<desc>A step-by-step page on how to mail in a part for repair.</desc>
+		<pagelink>Repairs</pagelink>
+		<url>http://mason.gmu.edu/~alugo2/IT213/Project5/repairs.html</url>
+	</page>
+
+	<page>
+		<siteimage>images/contactus.png</siteimage>
+		<desc>A simple page with contact information. Contains an embedded Google map.</desc>
+		<pagelink>Contact Us</pagelink>
+		<url>http://mason.gmu.edu/~alugo2/IT213/Project5/contactus.html</url>
+	</page>
+
+	<page>
+		<siteimage>images/sitemap.png</siteimage>
+		<desc>A "map" that contains every link on the site.</desc>
+		<pagelink>Site Map</pagelink>
+		<url>http://mason.gmu.edu/~alugo2/IT213/Project5/sitemap.html</url>
+	</page>
+
+</pages>

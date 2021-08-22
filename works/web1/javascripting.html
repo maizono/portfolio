@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Examples</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script>	
+		
+		//This function creates an array of goat facts, then sends the array through a for loop to format and print the data onto the page.
+		
+		function goatFacts(){
+			var goatFacts = new Array(3);
+				goatFacts[0] = "Baby goats, also known as kids, are standing and walking within a minute of being born.";
+				goatFacts[1] = "Goats are herd animals, so they will become depressed if they don't have a friend. It's good to own multiple at a time.";
+				goatFacts[2] = "Contrary to popular belief, goats are actually very picky eaters. They use their mouths to feel food before consuming it to make sure it's clean. They won't eat loose hay at all.";
+				goatFacts[3] = "Some owners put pool noodles on their goats to prevent them from damaging things they decide to ram into."
+			var results = document.getElementById("facts"); //Retrieves the text area for the data and stores it in a variable for easier editing within the for loop.
+			for (i=0; i<goatFacts.length; ++i){
+				results.innerHTML += "<li>" + goatFacts[i] + "</li>";
+			}
+		}
+		
+		
+		window.addEventListener("load", goatFacts, false);  //Executes the printName function when the page is loaded.
+		
+	</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
+       <a class="navbar-brand" href="https://maizono.github.io/portfolio/" id="top"><img src="favicon.ico"></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+                <a class="nav-link" href="https://maizono.github.io/portfolio/">Home</a>
+            </li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					About
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/aboutme.html">About Me</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/aboutwebsite.html">About this Website</a>
+					</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Previous Works
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/firstwebsite.html">My First Website</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/mobiledev.html">My First iOS Application</a>
+					</div>
+			</li>
+			<li class="nav-item dropdown active">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Examples
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/php.html">PHP</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/javascripting.html">JS & jQuery Extras</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/domedits.html">DOM</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/css/mystyles.css">My CSS File</a>
+					</div>
+			</li>
+			<li class="nav-item">
+                <a class="nav-link" href="https://maizono.github.io/portfolio/disclaimer.html">Disclaimer</a>
+            </li>
+          </ul>
+       </div>
+    </nav>
+    <div class="container">
+		<div class="row mypad">
+			<div class="column-sm-12">
+				<h1>JavaScript & jQuery Extras</h1>
+				<p><h4>Some extra bits of JavaScript & jQuery. JavaScript/jQuery is used throughout my site! More to come.</h4></p>
+			</div>
+		</div>
+		<br>
+	    <div class="row">
+          <div class=" col-md-12">
+			<div class="card">
+			<div class="card-body cardText">
+			<form id="rating" action="thankyou.html">	
+				<fieldset>
+					<legend>Take a moment to rate my site, if you'd like.</legend><br>
+						<h6 class="card-subtitle">NOTE: This form was made to demonstrate design and jQuery. Once the Submit button is clicked,
+						the user is taken to a dummy submission page. Information entered here will NOT be stored.</h6><br>
+						<div>
+							<label for="firstName">First Name: </label>
+							<input type="text" id="firstName" required>
+						</div><br>
+						<div>
+							<label for="lastName">Last Name: </label> 
+							<input type="text" id="lastName" required>
+						</div><br>
+						<div>
+							<label for="datepicker">Date of Birth: </label>
+							<input type="date" id="datepicker" /><br>
+						</div><br>
+						<div>
+							<label for="email">E-mail: </label>
+							<input type="email" id="email" required>
+						</div><br>
+						<div>
+							Are you a GMU student?<br><br>
+							<input type="radio" name="ans"> Yes <br>
+							<input type="radio" name="ans"> No <br><br>
+							If you said yes to the question above, what is your class ranking? 
+							<select>
+								<option>Select one</option>
+								<option>Freshman</option>
+								<option>Sophomore</option>
+								<option>Junior</option>
+								<option>Senior</option>
+								<option>Graduate</option>
+								<option>Don't know</option>
+								<option>Not Applicable</option>
+							</select>
+						</div><br>
+						<div>
+							Comments: <br><br>
+							<textarea rows="4" cols="50" required></textarea>
+						</div><br>
+						<div>
+							<input class="button" type="submit" value="Submit"> <input class="button" type="reset" value="Clear">
+						</div>
+				</fieldset>
+			</form>
+			<script>
+			
+			//Initializes the jQuery code for validation.
+			
+				$(document).ready(function(){
+					$("#rating").validate();
+				});	
+			</script>
+			</div>
+			</div>
+		  </div>
+       </div>
+	   <br>
+		  <div class="row">
+			<div class="col-md-12">
+					<div class="footerboot">
+						<p>© Aaron Lugo, <script type="text/javascript"> document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.</script></p>
+						<p><a href="#top" >Back to Top</a></p>
+					</div>
+            </div>
+          </div>
+    </div>
+  </body>
+</html>

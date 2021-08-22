@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My First Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<script src="SpryAssets/SpryData.js"  type="text/javascript"></script>
+	<script src="SpryAssets/xpath.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var webPages = new Spry.Data.XMLDataSet("xml/firstwebsiteData", "pages/page"); //Retrieves the XML data file.
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
+       <a class="navbar-brand" href="https://maizono.github.io/portfolio/" id="top"><img src="favicon.ico"></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+                <a class="nav-link" href="https://maizono.github.io/portfolio/">Home</a>
+            </li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					About
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/aboutme.html">About Me</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/aboutwebsite.html">About this Website</a>
+					</div>
+			</li>
+			<li class="nav-item dropdown active">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Previous Works
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/firstwebsite.html">My First Website</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/mobiledev.html">My First iOS Application</a>
+					</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Examples
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/php.html">PHP</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/javascripting.html">JS & jQuery Extras</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/domedits.html">DOM</a>
+						<a class="dropdown-item" href="https://maizono.github.io/portfolio/css/mystyles.css">My CSS File</a>
+					</div>
+			</li>
+			<li class="nav-item">
+                <a class="nav-link" href="https://maizono.github.io/portfolio/disclaimer.html">Disclaimer</a>
+            </li>
+          </ul>
+       </div>
+    </nav>
+    <div class="container content-align">
+		<div class="row mypad">
+			<div class="column-sm-12">
+				<h1>My First Website</h1>
+				<p><h4>A project for my first web development class, constructed with HTML and CSS.</h4></p>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<!--This button has the JavaScript method window.open() activate when clicked. --> 
+			<button class="button" onclick="window.open('http://mason.gmu.edu/~alugo2/IT213/Project5/index.html', '_blank');">View the Site</button>
+		</div>
+		<br>
+		<div class="row">
+          <div class="col-md-12">
+			<div spry:region="webPages">
+					<table class="cardText">
+						<thead>
+							<tr>
+								<th>Preview</th>
+								<th>Description</th>
+								<th>Link</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr spry:repeat="webPages" spry:setrow="webPages">
+								<td><img src="{siteimage}" alt="Preview of the webpage."></td>
+								<td>{desc}</td>
+								<td><div class="cardText"><a href="{url}" target="_blank">{pagelink}</a></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+             </div>
+          </div>
+		  <br>
+		  <div class="row">
+			<div class="col-md-12">
+					<div class="footerboot">
+						<p>© Aaron Lugo, <script type="text/javascript"> document.write("Last Modified Date: " + document.lastModified.toLocaleString()); //Prints the last modified date.</script></p>
+						<p><a href="#top" >Back to Top</a></p>
+					</div>
+            </div>
+          </div>
+	</div>
+  </body>
+</html>
