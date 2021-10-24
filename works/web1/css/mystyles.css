@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
 	display: inline-block;
 	padding: 10px;
 }
+
 .button {
 	background-color: #13643b;
 	text-align: center;

@@ -10,49 +10,138 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 	<title>Aaron's Portfolio</title>
 </head>
-<body>
+<body id="home">
 <nav class="mynav navbar navbar-expand-sm justify-content-center fixed-top">
   <ul class="navbar-nav">
     <li class="nav-item">
-		<a class="nav-link" href="https://maizono.github.io/portfolio/">HOME</a>
+		<a class="nav-link" href="#home">HOME</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="https://maizono.github.io/portfolio/about.html">ABOUT</a>
+      <a class="nav-link" href="#about">ABOUT</a>
     </li>
-	    <li class="nav-item">
-      <a class="nav-link" href="https://maizono.github.io/portfolio/contact.html">CONTACT</a>
+	   <li class="nav-item">
+      <a class="nav-link" href="#experience">EXPERIENCE</a>
     </li>
 	<li class="nav-item">
-      <a class="nav-link" href="https://maizono.github.io/portfolio/projects.html">PROJECTS</a>
+      <a class="nav-link" href="#contact">CONTACT</a>
+    </li>
+	<li class="nav-item">
+      <a class="nav-link" href="#projects">PROJECTS</a>
     </li>
   </ul>
 </nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<img src="images/aaron02.jpg" class="rounded-circle img-thumbnail">
+
+			<div class="jumbotron jumbotron-fluid text-center myjumbo">
+				<h1 class="maintitle">Hello. I'm Aaron, an aspiring professional Web Developer.</h1>
+				<h3 class="section-header">Thank you for taking a moment to check out my humble little website.</h3>
+				<button type="button" class="btn btn-success btn-lg mybtn" onclick="resBtn()" target="_blank">View my Resume</button>
 			</div>
-			<div class="col-md-6">
-				<h1>Hello. I'm Aaron, an aspiring professional Web Developer.</h1>
-					<br>
-					<hr>
-					<br>
-				<h5>From front-end to back-end, I am eager to learn more.</h5>
-					<br>
-					<hr>
-					<br>
-				<button type="button" class="btn btn-success btn-lg">Projects</button>
+
+	<div class="container" id="about">
+		<div class="row myrow">
+			<div class="col-lg-3">
+				<img src="images/aaron01.jpg" class="rounded-circle img-thumbnail aarimage" alt="A photo of me.">
+			</div>
+			<div class="col-lg-6">
+				<h2 class="section-header">Who am I?</h2>
+				<p class="section-content">
+				I am a web developer with a passion for creating and managing websites. As a recent college graduate, I still have a lot to learn, and
+				I am more than excited to finally have the chance to develop my skills through real-world projects.
+				</p>
+				<p class="section-content">
+				I graduated from George Mason University in 2021 with a Bachelor's of Science in Web Development. I learned some incredibly valuable skills
+				during my time in college, but my thirst for knowledge still hasn't been quenched.
+				</p>				
+				<p class="section-content">
+				I am currently expanding my proficiency through my own independent research or personal projects. All websites are made with 
+				many intricate pieces that tie together to make something beautiful, and I strive for expertice in all of these pieces.
+				</p>
+			</div>
+			<div class="col-lg-3">
+				<img src="images/aaron02.jpg" class="rounded-circle img-thumbnail aarimage" alt="A photo of me.">
+			</div>
+		</div>
+	</div>	
+	<div class="container" id="experience">
+		<hr>
+		<h2 class="section-header">What do I know?</h2>
+		<div class="row myrow">
+			<div class="col-md-12">
+				<h4 class="section-content">
+				Here's just a few languages/libraries that I like to use.
+				</h4>
+				<div class="row justify-content-center">
+					<div class="build" title="HTML5">
+						<img src="images/html.png" alt="HTML5 logo.">
+					</div>
+					<div class="build" title="CSS3">
+						<img src="images/css.png" alt="CSS3 logo.">
+					</div>
+					<div class="build" title="JavaScript">
+						<img src="images/javascript.png" alt="JavaScript logo.">
+					</div>	
+				</div>
+				<div class="row justify-content-center">
+					<div class="build" title="XML">
+						<img src="images/xml.png" alt="XML logo.">
+					</div>
+					<div class="build" title="AJAX">
+						<img src="images/ajax.png" alt="AJAX logo.">
+					</div>
+					<div class="build" title="jQuery">
+						<img src="images/jquery.png" alt="jQuery logo.">
+					</div>	
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		
+	<div class="container" id="projects">
+		<hr>
+		<h2 class="section-header">Projects</h2>
+		<div class="row justify-content-center myrow">
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body mycard">
+						<h5 class="card-title">Special title treatment</h5>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<button type="button" class="btn btn-success btn-md" onclick="" target="_blank">See More</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body mycard">
+						<h5 class="card-title">Special title treatment</h5>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<button type="button" class="btn btn-success btn-md" onclick="" target="_blank">See More</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body mycard">
+						<h5 class="card-title">Special title treatment</h5>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<button type="button" class="btn btn-success btn-md" onclick="" target="_blank">See More</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="container">
-	
+	<div class="container" id="contact">
+		<hr>
+		<h2 class="section-header">Contact</h2>
+		<div class="row justify-content-center myrow">
+			<div class="col-md-12">
+				<div>
+					<p class="section-content ignore">&copy; Aaron Lugo · (571) 285-8965 · <a href="mailto:lugo.aa@outlook.com">lugo.aa@outlook.com</a></p>
+				</div>
+			</div>
+		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
