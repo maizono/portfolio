@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobile Development - Aaron's Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="project01styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top mynav">
+       <a class="navbar-brand" href="#" id="top">Navigation</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT01/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT01/firstwebsite.html">My First Website</a>
+            </li>
+			<li class="nav-item active">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT01/mobiledev.html">Mobile Development<span class="sr-only">(current)</span></a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT01/phptoknowledge.html">PHP Examples</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" href="http://mason.gmu.edu/~alugo2/IT331/PROJECT01/references.html">References</a>
+            </li>
+          </ul>
+       </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center myjumbo">
+       <h1 class="display-4">Mobile Development</h1>
+    </div>
+    <div class="container">
+	<div class="row">
+			<div class="col-md-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">About the App</h5>
+                   <p class="card-text">
+		               <div class="cssLink">I created this iPhone app for a project for the IT 315 Mobile Development
+					   course. With it, a user can scroll through a small selection of
+					   diabetic meals and drinks from <a href="https://www.allrecipes.com">AllRecipes</a>.
+						A combination of Xcode programming and JSON data extraction was used.</div>
+				  
+                </div>
+             </div>
+             <br>
+			 <hr>
+             <br/>
+          </div>
+		  </div>
+       <div class="row">
+          <div class="col-md-4">
+             
+                <img class="appImage" src="navigation.png" alt="A photo of the first page of the app.">
+             
+          </div>
+          <div class="col-md-8">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">Navigation Panel</h5>
+                   <p class="card-text">
+		               This is the panel a user first sees when they open the app.
+					   I used a JSON data extracting method to retrieve the images
+					   and the text. Segues were used to connect each recipe to
+					   the next page.
+				   </p>
+                </div>
+             </div>
+             <br>
+             <br/>
+          </div>
+       </div>
+       <br/>
+	   <hr>
+       <br/>
+       <div class="row">
+          <div class="col-md-8">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">Recipe Details</h5>
+                   <p class="card-text">
+		               This screen, called a Detail View, showed a little bit more detail with the item:
+					   an enlarged picture, a small description, and the option
+					   to view even more information about it. These were also extracted
+					   from JSON data.
+				   </p>
+                </div>
+             </div>
+             <br>
+             <br/>
+          </div>
+		  <div class="col-md-4">
+            
+                <img class="appImage" src="recipedetails.png" alt="A photo of the first page of the app.">
+            
+          </div>
+       </div>
+       
+       <br>
+       <hr>
+	   <br>
+	   
+       <div class="row">
+          <div class="col-md-4">
+            
+                <img class="appImage" src="moreinformation.png" alt="A photo of the first page of the app.">
+            
+          </div>
+          <div class="col-md-8">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">More Information</h5>
+                   <p class="card-text">
+		               The Sub Detail View showed more in-depth information about the
+					   recipe: calories, servings, and preparation time. A link to the
+					   specific page of the recipe was also included. Once again, this 
+					   information all came from JSON data.
+				   </p>
+                </div>
+             </div>
+             <br>
+             <br/>
+          </div>
+       </div>
+	   
+	   <br>
+       <hr>
+	   <br>
+	   
+	     <div class="row">
+          <div class="col-md-8">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">External Site</h5>
+                   <p class="card-text">
+		               The final part of the app displayed the AllRecipes site page for the
+					   chosen recipe. This shows after tapping the "Website" button on the
+					   previous screen. This URL was also extracted from JSON data.
+				   </p>
+                </div>
+             </div>
+             <br>
+             <br/>
+          </div>
+		  <div class="col-md-4">
+            
+                <img class="appImage" src="externalsite.png" alt="A photo of the first page of the app.">
+       
+          </div>
+       </div>
+	 
+	   <br>
+	   <hr>
+	   <br>
+	   
+	   <div class="row">
+           <div class="text-center col-md-12">
+		  <div class="card">
+		  <div class="card-body">
+             <h4>Disclaimer</h4>
+             <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and 
+			 have been prepared according to the multimedia fair use guidelines and are restricted from 
+			 further use.<br> <div class="cssLink"><a href="http://mason.gmu.edu/~alugo2/IT331/PROJECT01/project01styles.css" >My CSS File</a></div>
+			 <br><div class="cssLink"><a href="#top" >Back to Top</a></div>
+			 
+          </div>
+		  </div>
+		  </div>
+		  
+       </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
