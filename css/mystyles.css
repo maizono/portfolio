@@ -123,7 +123,6 @@ a {
   color: black !important;
 }
 
-
 /* The Close Button */
 .close {
   color: #aaa;
@@ -140,4 +139,13 @@ a {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modimg {
+	max-width: 100%;
+	height: auto;
+}
+
+.modemph {
+	text-align: center;
 }
