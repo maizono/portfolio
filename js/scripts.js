@@ -52,14 +52,14 @@ document.getElementById("btn2").addEventListener("click", displayModal);
 document.getElementById("btn2").addEventListener("click", btn2Content);
 
 function btn2Content(){
-	document.getElementById("modalText").innerHTML = "Coming soon!";
+	document.getElementById("modaContent").innerHTML = "<h1>Coming soon!</h1>";
 }
 
 document.getElementById("btn3").addEventListener("click", displayModal);
 document.getElementById("btn3").addEventListener("click", btn3Content);
 
 function btn3Content(){
-	document.getElementById("modalText").innerHTML = "Coming soon!";
+	document.getElementById("modalContent").innerHTML = "<h1>Coming soon!<h1>";
 }
 
 var span = document.getElementsByClassName("close")[0];
