@@ -52,7 +52,7 @@ document.getElementById("btn2").addEventListener("click", displayModal);
 document.getElementById("btn2").addEventListener("click", btn2Content);
 
 function btn2Content(){
-	document.getElementById("modaContent").innerHTML = "<h1>Coming soon!</h1>";
+	document.getElementById("modalContent").innerHTML = "<h1>Coming soon!</h1>";
 }
 
 document.getElementById("btn3").addEventListener("click", displayModal);
